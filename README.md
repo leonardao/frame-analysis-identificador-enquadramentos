@@ -2,18 +2,28 @@
 <img src="https://static.wixstatic.com/media/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.jpg/v1/fill/w_296,h_130,al_c,lg_1,q_80/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.webp" width="200" alt="Front-end Brasil">
 </p>
 <h2 align="center">Identificador de enquadramentos da comunicação política</h2>
-<p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política</b></p>
-<p align="center">:newspaper:<b> Programa de Pós-graduação em Comunicação da PUC-Rio</b></p>
+<p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política da PUC-Rio</b></p>
+<p align="center">Programa de Pós-graduação em Comunicação</p>
 <br>
-<p align="center">Doutorando: Leonardo Magalhães Firmino (PUC-Rio)</p>
-<p align="center">Orientador: Prof. Arthur Ituassu (PUC-Rio)</p>
-<p align="center">Coorientador: Prof. Daniel Schwabe (PUC-Rio)</p>
+- Doutorando: Leonardo Magalhães Firmino (PUC-Rio)
+- Orientador: Prof. Arthur Ituassu (PUC-Rio)
+- Coorientador: Prof. Daniel Schwabe (PUC-Rio)
 
 ## Qual o objetivo?
-Software para a tese tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou frames) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000).
+Software para a tese tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou _frames_) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000):
+- Conflito
+- Atribuição de responsabilidade
+- Interesse humano
+- Moralidade
+- Consequências econômicas
 
-## Técnica de identificação
-O método de identificação utlizado é dictionary based. Para cada frames definiu-se um conjunto de palavras-chave que, se presentes no texto do tweet, nos diz qual enquadramento foi utilizado no discurso. 
+## Como utilizar o identificador
+O método de identificação utlizado é _dictionary based_. Para cada _frame_ definiu-se um conjunto de palavras-chave que, se presentes no texto do _tweet_, nos diz qual enquadramento foi utilizado no discurso. 
+Temos dois arquivos básicos que regulam o funcionamento do identificador de _frames_: 
+-_base_tweets.xlsx_
+-_keyword_frames.xlsx_
+O arquivo _base_tweets.xlsx_ deve conter todos os _tweets_ a analisar na coluna "_Tweets_". Copie e cole a lista de _tweets_ nesta coluna, mas **sempre mantenha a primeira linha como cabeçalho**. Ao lado de cada _tweet_ estão as colunas de resutado da análise. São cinco colunas (uma para cada enquadramento). Quando o _frame_ foi identificado no texto do _tweet_ o resultado será "1", caso contrário o valor da cela será a palavra-chave que foi usada como identificador do _frame_.
+O arquivo _keyword_frames.xlsx_ contém todas as palavras-chave que irão identificar os enquadramentos nos tweets. Este arquivo pode ser editado para atualizar o método de identificação- Para garantir o correto funcionamento do programa, **não mude a estrutura do arquivo** e limite-se somente a adicionar ou eliminar palavras-chave da lista. Não deixe celas fazias entre uma palavra-chave e outra.
 
 ## Quais são os cinco enquadramentos genéricos da Comunicação Política, segundo Semetko e Valkenburg?
 
