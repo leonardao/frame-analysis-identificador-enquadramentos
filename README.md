@@ -11,7 +11,7 @@
 - Coorientador: Prof. Daniel Schwabe (PUC-Rio)
 
 ## Qual o objetivo?
-Software para a tese tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou _frames_) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000):
+Software para a tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou _frames_) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000):
 - Conflito
 - Atribuição de responsabilidade
 - Interesse humano
@@ -21,7 +21,7 @@ Software para a tese tese de doutorado do autor que identifica de forma automati
 ## Como utilizar o identificador
 O método de identificação utlizado é _dictionary based_. Para cada _frame_ definiu-se um conjunto de palavras-chave que, se presentes no texto do _tweet_, nos diz qual enquadramento foi utilizado no discurso. 
 
-Para utilizar o presente _software_ é suficiente copiar para o arquivo _base_tweets.xlsx_ todos os tweets que se quer analisar, mantendo os cabeçalhos da planilha intactos. Salve, feche o arquivo e rode o programa _identificador_frames.py_. Ao finalizar a análise, abra novamente a planilha _base_tweets.xlsx_ para ver o resultado, que estará visível nas colunas ao lado de cada _tweet_.
+Para utilizar o presente _software_ é suficiente **copiar para o arquivo _base_tweets.xlsx_ todos os tweets que se quer analisar**, mantendo os cabeçalhos da planilha intactos. **Salve, feche o arquivo e rode o programa _identificador_frames.py_**. Ao finalizar a análise, **abra novamente a planilha _base_tweets.xlsx_ para ver o resultado**, que estará visível nas colunas ao lado de cada _tweet_.
 
 ### Em detalhes:
 Temos dois arquivos básicos que regulam o funcionamento do identificador de _frames_: 
@@ -29,9 +29,9 @@ Temos dois arquivos básicos que regulam o funcionamento do identificador de _fr
 - _base_tweets.xlsx_
 - _keyword_frames.xlsx_
 
-O arquivo _base_tweets.xlsx_ deve conter todos os _tweets_ a analisar na coluna "_Tweets_". Copie e cole a lista de _tweets_ nesta coluna, mas **sempre mantenha a primeira linha como cabeçalho**. Ao lado de cada _tweet_ estão as colunas de resutado da análise. São cinco colunas (uma para cada enquadramento). Quando o _frame_ foi identificado no texto do _tweet_ o resultado será "1", caso contrário o valor da cela será a palavra-chave que foi usada como identificador do _frame_.
+O arquivo _base_tweets.xlsx_ deve conter todos os _tweets_ a analisar na coluna "_Tweets_". Copie e cole a lista de _tweets_ nesta coluna, mas **sempre mantenha a primeira linha como cabeçalho**. Ao lado de cada _tweet_ estão as colunas de resutado da análise. São cinco colunas (uma para cada enquadramento). Quando o _frame_ foi identificado no texto do _tweet_ o resultado será "1", caso contrário o valor da cela será "0". Na versão de teste atual o resultado "1" foi substituido pela palavra-chave que identificou o enquadramento em questão para facilitar a fase de validação do software.
 
-O arquivo _keyword_frames.xlsx_ contém todas as palavras-chave que irão identificar os enquadramentos nos tweets. Este arquivo pode ser editado para atualizar o método de identificação- Para garantir o correto funcionamento do programa, **não mude a estrutura do arquivo** e limite-se somente a adicionar ou eliminar palavras-chave da lista. Não deixe celas fazias entre uma palavra-chave e outra.
+O arquivo _keyword_frames.xlsx_ contém todas as palavras-chave que irão identificar os enquadramentos nos tweets. Este arquivo pode ser editado para atualizar o método de identificação- Para garantir o correto funcionamento do programa, **não mude a estrutura do arquivo** e limite-se somente a adicionar ou eliminar palavras-chave da lista. Não deixe celas fazias entre uma palavra-chave e outra. Com o fim de deixar o programa mais leve, as palavras-chave estão no formato de "radical", ou seja, o começo da palavra. Este método permite identificar diversas possíveis conjugações verbais e variações de conceitos com um conjunto menor de palavras.
 
 ## Quais são os cinco enquadramentos genéricos da Comunicação Política, segundo Semetko e Valkenburg?
 
