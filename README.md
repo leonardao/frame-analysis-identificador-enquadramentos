@@ -61,4 +61,4 @@ Conforme definido por Semetko e Valkenburg (2000), o frame das consequências ec
 Uma _região política_, geralmente uma nação, tem um sistema econômico, a _economia_, definida pelo nível de produção e consumo de bens e serviços, que é afetada por algum _causador_ interno ou externo. O _dinheiro_ refere-se a um meio usado para trocar mercadorias e serviços. Na maioria dos casos, é emitido pelo governo, seu _criador_, na forma de moedas e notas. Quantidades particulares podem ter um uso designado ou planejado, ou podem ter vindo de alguma _origem_.
 
 ### Referência bibliográfica
-_SEMETKO, Holli A; VALKENBURG, Patti M. Framing European Politics: A Content Analysis of Press and Television News. Journal of Communication, pp. 93-109, 2000._
+SEMETKO, Holli A; VALKENBURG, Patti M. Framing European Politics: A Content Analysis of Press and Television News. Journal of Communication, pp. 93-109, 2000.
