@@ -2,16 +2,17 @@
 <img src="https://static.wixstatic.com/media/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.jpg/v1/fill/w_296,h_130,al_c,lg_1,q_80/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.webp" width="200" alt="Front-end Brasil">
 </p>
 <h2 align="center">Identificador de enquadramentos da comunicação política</h2>
-<p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política da PUC-Rio.</b></p>
+<p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política</b></p>
+<p align="center">:newspaper:<b> Programa de Pós-graduação em Comunicação da PUC-Rio</b></p>
 <br>
 <p align="center">Doutorando: Leonardo Magalhães Firmino (PUC-Rio)</p>
 <p align="center">Orientador: Prof. Arthur Ituassu (PUC-Rio)</p>
-<p align="center">Corientador: Prof. Daniel Schwabe (PUC-Rio)</p>
+<p align="center">Coorientador: Prof. Daniel Schwabe (PUC-Rio)</p>
 
 ## Qual o objetivo?
 Software para a tese tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou frames) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000).
 
-## Método
+## Técnica de identificação
 O método de identificação utlizado é dictionary based. Para cada frames definiu-se um conjunto de palavras-chave que, se presentes no texto do tweet, nos diz qual enquadramento foi utilizado no discurso. 
 
 ## Quais são os cinco enquadramentos genéricos da Comunicação Política, segundo Semetko e Valkenburg?
