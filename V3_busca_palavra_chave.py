@@ -5,7 +5,6 @@ import unicodedata
 import string
 import time
 import itertools
-import multiprocessing
 
 def carrega_keywords_frame ( nome_planilha_frames ):
 
