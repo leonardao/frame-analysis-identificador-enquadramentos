@@ -4,8 +4,6 @@ import re
 import unicodedata
 import string
 import time
-import itertools
-import multiprocessing
 
 def pega_tweets ( aba_planilha_tweet ):
     matrix_tweets = []
@@ -99,8 +97,8 @@ base_tweets.save ( filename = nome_base_tweets_xls )
 tempo = time.time () - contador
 print ( "\n-TEMPO TOTAL DE PRECESSAMENTO: {} segundos".format ( int ( tempo ) ) )
 print ( "\t\t+ SIMULAÇÃO PARA 350 MIL TWEETS:" )
-print ( "\t\t\t- PEGAR TWEETS: {:.1f} minutos ---".format ( timer_pega_tweets * 100 / 60 ) )
+print ( "\t\t\t- PEGAR TWEETS: {:.1f} minutos".format ( timer_pega_tweets * 100 / 60 ) )
 print ( "\t\t\t- TEMPO TOTAL: {:.1f} horas".format ( (time.time () - contador) * 100 / 60 / 60 ) )
 print ( "\t\t+ SIMULAÇÃO PARA 3,5 MILHÕES TWEETS:" )
-print ( "\t\t\t- PEGAR TWEETS: {:.1f} horas ---".format ( timer_pega_tweets * 1000 / 60 ) )
-print ( "\t\t\t- TEMPO TOTAL: {:.1f} dias".format ( (time.time () - contador) * 1000 / 60 / 60 ) )
+print ( "\t\t\t- PEGAR TWEETS: {:.1f} horas".format ( timer_pega_tweets * 1000 / 60 ) )
+print ( "\t\t\t- TEMPO TOTAL: {:.1f} dias".format ( (time.time () - contador) * 1000 / 60 / 24 ) )
