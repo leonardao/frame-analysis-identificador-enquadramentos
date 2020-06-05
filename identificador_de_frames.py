@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from openpyxl import load_workbook
-from nltk import ngrams
 import re
 import unicodedata
 import string
@@ -9,7 +8,6 @@ import csv
 
 def pega_tweets_trigrama ( aba_planilha_tweet ):
     matrix_tweets = []
-
     # Retorna uma lista de palavras normalizada.
     def normaliza_tweet ( tweet_original ):
         # Elimina nomes de @usuário, #hashtags e "RT".
@@ -24,50 +22,11 @@ def pega_tweets_trigrama ( aba_planilha_tweet ):
 
         # Elimina pontuação
         dep = str.maketrans ( '', '', string.punctuation )
-        #limpo = limpo.translate ( dep ).split ()
         limpo = limpo.translate ( dep )
-
-        # Transforma em trigramas e salva em uma lista
-        n = 3
-        tweet_normalizado = []
-        trigramas = ngrams ( limpo.split (), n )
-        for gramas in trigramas:
-            tweet_normalizado.append ( ' '.join ( gramas ) )
-        return tweet_normalizado
-
-    # Recupera todos os tweets de uma planilha e os salva em uma matriz.
-    num_linhas = aba_planilha_tweet.max_row + 1
-
-    for linha_t in range ( 2, num_linhas ):
-        # Pega o tweet da planilha depura o texto
-        texto = str ( aba_planilha_tweet.cell ( row = linha_t, column = 1 ).value )
-        matrix_tweets.append(normaliza_tweet(texto))
-
-    return matrix_tweets
-
-def pega_tweets ( aba_planilha_tweet ):
-    matrix_tweets = []
-
-    # Retorna uma lista de palavras normalizada.
-    def normaliza_tweet ( tweet_original ):
-        # Elimina nomes de @usuário, #hashtags e "RT".
-        limpo = ' '.join (
-            re.sub ( "(@[A-Za-z0-9]+)|(#[A-Za-z0-9]+)|(\w+:\/\/\S+)|(RT)", " ", tweet_original ).split () )
-
-        # Substitui letras com acento, elimina emoticons e converte tudo em minúsculas.
-        limpo = ''.join (
-            (frase for frase in unicodedata.normalize ( 'NFD', limpo ) if
-             unicodedata.category ( frase ) != 'Mn') ).encode (
-            'ascii', 'ignore' ).decode ( 'ascii' ).lower ()
-
-        # Elimina pontuação
-        dep = str.maketrans ( '', '', string.punctuation )
-        limpo = limpo.translate ( dep ).split ()
-
+        limpo = ' ' + limpo + ' '
         return limpo
 
     # Recupera todos os tweets de uma planilha e os salva em uma matriz.
-
     num_linhas = aba_planilha_tweet.max_row + 1
 
     for linha_t in range ( 2, num_linhas ):
@@ -87,16 +46,13 @@ def pega_keyword_frame ( nome_base_frames ):
     return matriz_frames
 
 def busca_frame ( tweet_normalizado, tipo_frame ):
-
     achados = []
-
-    for elemento in tweet_normalizado:
-        for keyword in tipo_frame:
-            if elemento.startswith ( keyword ):
-                achados.append ( elemento )
+    for keyword in tipo_frame:
+        if keyword in tweet_normalizado:
+            achados.append ( keyword )
     return achados
 
-nome_base_tweets_xlsx = "2-base_tweets_classificada.xlsx"
+nome_base_tweets_xlsx = "Base_tweets_classificada.xlsx"
 base_tweets = load_workbook ( nome_base_tweets_xlsx )
 aba_tweets = base_tweets [ "tweets" ]
 
@@ -110,17 +66,18 @@ timer_pega_tweets = time.time () - contador
 
 num_tweets = len ( tweets )
 num_frames = 5
-
+frames_genericos = [ 'ATRIBUIÇÃO DE RESPONSABILIDADE', 'CONFLITO', 'INTERESSE HUMANO', 'MORALIDADE', 'CONSEQUÊNCIAS ECONÔMICAS' ]
 for t in range ( 0, num_tweets ):
-    print ( "\nTWEET [{}]: {}".format ( t + 1, tweets[t] ) )
+    print ( "\nTWEET [{}]:{}".format ( t + 1, tweets[t] ) )
 
     for f in range ( 0, num_frames ):
         resultado = busca_frame ( tweets[t], tipo_frame[f] )
 
         if resultado:
             aba_tweets.cell ( t+2, f+2, value = ", ".join ( resultado ) )
-            print ( "\tDO TIPO {} ENCONTRADOS: {}".format ( f + 1, resultado ) )
-
+            print ( "\t{}: {}".format ( frames_genericos[f], resultado ) )
+        else:
+            aba_tweets.cell ( t + 2, f + 2, value = "0" )
 base_tweets.save ( filename = nome_base_tweets_xlsx )
 
 tempo = time.time () - contador
