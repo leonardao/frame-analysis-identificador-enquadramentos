@@ -6,7 +6,7 @@ import string
 import time
 import csv
 
-def pega_tweets_trigrama ( aba_planilha_tweet ):
+def pega_tweets ( aba_planilha_tweet ):
     matrix_tweets = []
     # Retorna uma lista de palavras normalizada.
     def normaliza_tweet ( tweet_original ):
@@ -52,7 +52,7 @@ def busca_frame ( tweet_normalizado, tipo_frame ):
             achados.append ( keyword )
     return achados
 
-nome_base_tweets_xlsx = "Base_tweets_classificada.xlsx"
+nome_base_tweets_xlsx = "2b-base_tweets_classificada.xlsx"
 base_tweets = load_workbook ( nome_base_tweets_xlsx )
 aba_tweets = base_tweets [ "tweets" ]
 
@@ -60,7 +60,7 @@ tipo_frame = pega_keyword_frame ( "1-base_keywords_frames.csv" )
 
 contador = time.time ()
 
-tweets = pega_tweets_trigrama ( aba_tweets )
+tweets = pega_tweets ( aba_tweets )
 
 timer_pega_tweets = time.time () - contador
 
