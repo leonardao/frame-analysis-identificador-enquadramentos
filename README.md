@@ -36,7 +36,7 @@ Para utilizar o presente _software_ é suficiente **copiar para a primeira colun
 
 <p align="center"><b>Exemplo:</b></p>
 <p align="center">
-<img src="https://www.dropbox.com/s/9qh9isoobx2p7jn/Exemplo-planilha-git-hub.png" alt="Exemplo de identificação de enquadramentos nos tweets">
+<img src="https://github.com/leonardao/frame-analysis-identificador-enquadramentos/blob/master/Exemplo-planilha-git-hub.png" alt="Exemplo de identificação de enquadramentos nos tweets">
 </p>
 
 ### Em detalhes:
