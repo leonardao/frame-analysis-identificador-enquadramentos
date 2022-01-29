@@ -3,7 +3,6 @@ from openpyxl import load_workbook
 import re
 import unicodedata
 import string
-import time
 import csv
 
 def pega_tweets ( aba_planilha_tweet ):
@@ -58,33 +57,23 @@ aba_tweets = base_tweets [ "tweets" ]
 
 tipo_frame = pega_keyword_frame ( "1-base_keywords_frames.csv" )
 
-contador = time.time ()
-
 tweets = pega_tweets ( aba_tweets )
 
-timer_pega_tweets = time.time () - contador
-
 num_tweets = len ( tweets )
-num_frames = 5
-frames_genericos = [ 'ATRIBUIÇÃO DE RESPONSABILIDADE', 'CONFLITO', 'INTERESSE HUMANO', 'MORALIDADE', 'CONSEQUÊNCIAS ECONÔMICAS' ]
+num_frames = 6
+frames_genericos_especificos = [ 'ATRIBUIÇÃO DE RESPONSABILIDADE', 'CONFLITO', 'MORALIDADE', 'CONSEQUÊNCIAS DA PANDEMIA', 'MEDIDAS DE CONTENÇÃO', 'MÉTODOS DE TRATAMENTO' ]
+
 for t in range ( 0, num_tweets ):
-    print ( "\nTWEET [{}]:{}".format ( t + 1, tweets[t] ) )
+    #print ( "\nTWEET [{}]:{}".format ( t + 1, tweets[t] ) )
 
     for f in range ( 0, num_frames ):
         resultado = busca_frame ( tweets[t], tipo_frame[f] )
 
         if resultado:
-            aba_tweets.cell ( t+2, f+2, value = ", ".join ( resultado ) )
-            print ( "\t{}: {}".format ( frames_genericos[f], resultado ) )
+            aba_tweets.cell ( t + 2, f + 2, value = ", ".join ( resultado ) )
+			#aba_tweets.cell ( t + 2, f + 2, value = "1" )
+            #print ( "\t{}: {}".format ( frames_genericos_especificos[f], resultado ) )
         else:
             aba_tweets.cell ( t + 2, f + 2, value = "0" )
+			
 base_tweets.save ( filename = nome_base_tweets_xlsx )
-
-tempo = time.time () - contador
-print ( "\n-TEMPO TOTAL DE PRECESSAMENTO: {} segundos".format ( int ( tempo ) ) )
-print ( "\t\t+ SIMULAÇÃO PARA 350 MIL TWEETS:" )
-print ( "\t\t\t- PEGAR TWEETS: {:.1f} minutos".format ( timer_pega_tweets * 100 / 60 ) )
-print ( "\t\t\t- TEMPO TOTAL: {:.1f} horas".format ( (time.time () - contador) * 100 / 60 / 60 ) )
-print ( "\t\t+ SIMULAÇÃO PARA 3,5 MILHÕES TWEETS:" )
-print ( "\t\t\t- PEGAR TWEETS: {:.1f} minutos".format ( timer_pega_tweets * 1000 / 60 ) )
-print ( "\t\t\t- TEMPO TOTAL: {:.1f} horas".format ( (time.time () - contador) * 1000 / 60 / 60 ) )
