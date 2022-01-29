@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://static.wixstatic.com/media/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.jpg/v1/fill/w_296,h_130,al_c,lg_1,q_80/ade03f_47f0c9f925a34da58dcb9d53bda330f5~mv2.webp" width="200" alt="Front-end Brasil">
 </p>
-<h2 align="center">Identificador de enquadramentos da comunicação política</h2>
+<h2 align="center">Identificador de enquadramentos genéricos e específicos da comunicação política</h2>
 <p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política da PUC-Rio</b></p>
 <p align="center">Programa de Pós-graduação em Comunicação</p>
 <br>
@@ -11,27 +11,31 @@
 - Coorientador: Prof. Daniel Schwabe (PUC-Rio)
 
 ## Qual o objetivo?
-Software para a tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em tweets. Os enquadramentos (ou _frames_) são formas discursivas de tratar assuntos específicos no texto. São levados em consideração os cinco frames genéricos, segundo o modelo de Semetko e Valkenburg (2000):
+Software para a tese de doutorado do autor que identifica de forma automatizada enquadramentos genéricos da comunicação política em qualquer tipo de unidade de análise textual em língua portuguesa. Os quadros (ou _frames_) são pontos de vista selecionados e destacados na comunicação ao tratar assuntos específicos. Portanto, para Entman (1993, p.52), enquadrar uma questão significa: 
+<br>"_selecionar alguns aspectos da realidade percebida e torná-los mais relevantes em um texto comunicativo, a fim de promover uma definição de problema particular, interpretação causal, avaliação moral e/ou recomendação de tratamento para a questão descrita_".
+<br>
+O presente _script_ em Python identifica cinco frames genéricos e três específicos sobre saúde.
+
+Os _frames_ genéricos podem ser aplicados a qualquer tema de estudo, como proposto por Semetko e Valkenburg (2000):
 - Conflito
 - Atribuição de responsabilidade
 - Interesse humano
 - Moralidade
 - Consequências econômicas
 
+Os _frames_ específicos servem apenas para o tema da saúde, especificamente para o estudo de contextos de epidemias, em especial a da Covid-19: 
+- Consequências da pandemia
+- Medidas de contenção
+- Métodos de tratamento
+
 ## Como utilizar o identificador
 O método de identificação utlizado é _dictionary based_. Para cada _frame_ definiu-se um conjunto de palavras-chave que, se presentes no texto do _tweet_, nos diz qual enquadramento foi utilizado no discurso. 
 
 Para utilizar o presente _software_ é suficiente **copiar para o arquivo _base_tweets.xlsx_ todos os tweets que se quer analisar**, mantendo os cabeçalhos da planilha intactos. **Salve, feche o arquivo e rode o programa _identificador_frames.py_**. Ao finalizar a análise, **abra novamente a planilha _base_tweets.xlsx_ para ver o resultado**, que estará visível nas colunas ao lado de cada _tweet_.
 
-### Em detalhes:
-Temos dois arquivos básicos que regulam o funcionamento do identificador de _frames_: 
+O arquivo _base_tweets.xlsx_ deve conter todos os _tweets_ a analisar na coluna "_Tweets_". Copie e cole a lista de _tweets_ nesta coluna, mas **sempre mantenha a primeira linha como cabeçalho**. Ao lado de cada _tweet_ estão as colunas de resutado da análise. São cinco colunas (uma para cada enquadramento). Quando o _frame_ foi identificado no texto do _tweet_ o resultado será "1", caso contrário o valor da cela será "0".
 
-- _base_tweets.xlsx_
-- _keyword_frames.xlsx_
-
-O arquivo _base_tweets.xlsx_ deve conter todos os _tweets_ a analisar na coluna "_Tweets_". Copie e cole a lista de _tweets_ nesta coluna, mas **sempre mantenha a primeira linha como cabeçalho**. Ao lado de cada _tweet_ estão as colunas de resutado da análise. São cinco colunas (uma para cada enquadramento). Quando o _frame_ foi identificado no texto do _tweet_ o resultado será "1", caso contrário o valor da cela será "0". Na versão de teste atual o resultado "1" foi substituido pela palavra-chave que identificou o enquadramento em questão para facilitar a fase de validação do software.
-
-O arquivo _keyword_frames.xlsx_ contém todas as palavras-chave que irão identificar os enquadramentos nos tweets. Este arquivo pode ser editado para atualizar o método de identificação- Para garantir o correto funcionamento do programa, **não mude a estrutura do arquivo** e limite-se somente a adicionar ou eliminar palavras-chave da lista. Não deixe celas fazias entre uma palavra-chave e outra. Com o fim de deixar o programa mais leve, as palavras-chave estão no formato de "radical", ou seja, o começo da palavra. Este método permite identificar diversas possíveis conjugações verbais e variações de conceitos com um conjunto menor de palavras.
+O arquivo _identificador_frames.py_ contém todas as palavras-chave que irão identificar os enquadramentos nos _tweets_. Este arquivo pode ser editado para atualizar o método de identificação- Para garantir o correto funcionamento do programa, **não mude a estrutura do arquivo** e limite-se somente a adicionar ou eliminar palavras-chave da lista. Com o fim de deixar o programa mais leve, as palavras-chave estão no formato de radical, sufixo e desinência, ou seja, o começo ou final das palavras. Este método permite identificar diversas possíveis conjugações verbais e variações de conceitos com um conjunto menor de palavras.
 
 ## Quais são os cinco enquadramentos genéricos da Comunicação Política, segundo Semetko e Valkenburg?
 
@@ -61,4 +65,5 @@ Conforme definido por Semetko e Valkenburg (2000), o frame das consequências ec
 Uma _região política_, geralmente uma nação, tem um sistema econômico, a _economia_, definida pelo nível de produção e consumo de bens e serviços, que é afetada por algum _causador_ interno ou externo. O _dinheiro_ refere-se a um meio usado para trocar mercadorias e serviços. Na maioria dos casos, é emitido pelo governo, seu _criador_, na forma de moedas e notas. Quantidades particulares podem ter um uso designado ou planejado, ou podem ter vindo de alguma _origem_.
 
 ### Referência bibliográfica
-SEMETKO, Holli A; VALKENBURG, Patti M. Framing European Politics: A Content Analysis of Press and Television News. Journal of Communication, pp. 93-109, 2000.
+SEMETKO, Holli A; VALKENBURG, Patti M. Framing European Politics: A Content Analysis of Press and Television News. **Journal of Communication**, pp. 93-109, 2000.
+ENTMAN, Robert M. Framing: Toward Clarification of a Fractured Paradigm. **Journal of Communication**, [s. l.], v. 43, n. 4, p. 51–58, 1993. 
