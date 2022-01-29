@@ -10,10 +10,10 @@
 - Orientador: Prof. Arthur Ituassu (PUC-Rio)
 - Coorientador: Prof. Daniel Schwabe (PUC-Rio)
 
-## Qual o objetivo?
+## Qual é o objetivo?
 Software de análise para a pesquisa de doutorado do autor (defendida no dia 3 de fevereiro de 2022) que identifica de forma automatizada enquadramentos genéricos da comunicação política em qualquer tipo de unidade de análise textual em língua portuguesa. Os quadros (ou _frames_) são pontos de vista selecionados e destacados na comunicação ao tratar assuntos específicos. Portanto, para Entman (1993, p.52), enquadrar uma questão significa: 
 
-"_selecionar alguns aspectos da realidade percebida e torná-los mais relevantes em um texto comunicativo, a fim de promover uma definição de problema particular, interpretação causal, avaliação moral e/ou recomendação de tratamento para a questão descrita_".
+>"_selecionar alguns aspectos da realidade percebida e torná-los mais relevantes em um texto comunicativo, a fim de promover uma definição de problema particular, interpretação causal, avaliação moral e/ou recomendação de tratamento para a questão descrita_".
 
 O presente _script_ em Python identifica 3 _frames_ genéricos e 3 específicos sobre o tema da saúde.
 
@@ -79,7 +79,7 @@ Esse frame possui duas dimensões muito parecidas ao que a literatura sobre quad
 
 Segundo Semetko e Valkenburg (2000, p. 95), a dimensão do interesse humano: 
 
-“_traz um rosto humano ou uma perspectiva emocional na apresentação de um evento, questão ou problema (...) refere-se a um esforço para personalizar as notícias, dramatizar ou 'emocionalizar' as notícias, a fim de capturar e reter o interesse do público”_.
+>“_traz um rosto humano ou uma perspectiva emocional na apresentação de um evento, questão ou problema (...) refere-se a um esforço para personalizar as notícias, dramatizar ou 'emocionalizar' as notícias, a fim de capturar e reter o interesse do público”_.
 
 Já no que se refere à dimensão econômica da pandemia, se ressalta o impacto financeiro da crise sanitária no país, região, instituição, grupo ou indivíduo.
 
