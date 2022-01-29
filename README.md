@@ -106,5 +106,6 @@ Nos textos, esse quadro é identificado quando se faz referência à:
 
 
 ### Referência bibliográfica
-SEMETKO, Holli A; VALKENBURG, Patti M. Framing European Politics: A Content Analysis of Press and Television News. **Journal of Communication**, pp. 93-109, 2000.
-ENTMAN, Robert M. Framing: Toward Clarification of a Fractured Paradigm. **Journal of Communication**, [s. l.], v. 43, n. 4, p. 51–58, 1993. 
+SEMETKO, Holli A; VALKENBURG, Patti M. _Framing European Politics: A Content Analysis of Press and Television News_. **Journal of Communication**, pp. 93-109, 2000.
+
+ENTMAN, Robert M. _Framing: Toward Clarification of a Fractured Paradigm_. **Journal of Communication**, v. 43, n. 4, pp. 51–58, 1993. 
