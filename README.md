@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://www.dropbox.com/s/3kmemgptsa0czq0/logo-comp-ppgcom-puc-rio.webp?dl=0" width="200" alt="Logo COMP Grupo de Pesquisa em Comunicação, Internet e Política PPGCOM PUC-Rio">
+ <img src="https://drive.google.com/file/d/1vkRXd_XRAFY3NLl-ezmtXyuoRYj15BOn/view?usp=sharing" width="200" alt="Logo COMP Grupo de Pesquisa em Comunicação, Internet e Política PPGCOM PUC-Rio">
 </p>
 <h2 align="center">Identificador de enquadramentos genéricos e específicos da comunicação política</h2>
 <p align="center">:newspaper:<b> Grupo de Pesquisa em Comunicação, Internet e Política da PUC-Rio</b></p>
