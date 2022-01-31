@@ -128,7 +128,7 @@ Nele é possível encontrar os seguintes arquivos:
 
 Se recomenda abrir os arquivos como _DataFrames_ mediante a biblioteca Pandas do Python.
 
-### Referência bibliográfica
+### Referências bibliográficas
 SEMETKO, Holli A; VALKENBURG, Patti M. _Framing European Politics: A Content Analysis of Press and Television News_. **Journal of Communication**, pp. 93-109, 2000.
 
 ENTMAN, Robert M. _Framing: Toward Clarification of a Fractured Paradigm_. **Journal of Communication**, v. 43, n. 4, pp. 51–58, 1993. 
