@@ -106,9 +106,9 @@ Nos textos, esse quadro é identificado quando se faz referência à:
 
 ## Teste de confiabilidade do identificador automático
 
-A seguir a tabela mostra o alfa de Krippendorf obtido para o classificador automático para cada _frames_.
+A seguir a tabela mostra o alfa de Krippendorf (α) obtido para o classificador automático para cada _frames_.
 
-<p align="center"><b>Teste de confiabilidade por _frame_ (alfa de Krippendorf):</b></p>
+<p align="center"><b>Teste de confiabilidade por _frame_ (α de Krippendorf):</b></p>
 <p align="center">
 <img src="https://github.com/leonardao/frame-analysis-identificador-enquadramentos/blob/master/tabela-confiabilidade.png" alt="Teste de confiabilidade do identificador automático de frames genéricos e específicos">
 </p>
