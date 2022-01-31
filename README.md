@@ -104,13 +104,29 @@ Nos textos, esse quadro é identificado quando se faz referência à:
 - Medicamentos, como os do chamado Kit Covid (cloroquina, azitromicina, ivermectina) e outros (antibióticos, paracetamol, entre outros);
 - Disputa de narrativas sobre como tratar a doença.
 
-###Teste de confiabilidade do identificador automático
+## Teste de confiabilidade do identificador automático
+
 A seguir a tabela mostra o alfa de Krippendorf obtido para o classificador automático para cada _frames_.
 
 <p align="center"><b>Teste de confiabilidade por _frame_ (alfa de Krippendorf):</b></p>
 <p align="center">
 <img src="https://github.com/leonardao/frame-analysis-identificador-enquadramentos/blob/master/tabela-confiabilidade.png" alt="Teste de confiabilidade do identificador automático de frames genéricos e específicos">
 </p>
+
+## Reprodutibilidade
+
+A pesquisa doutoral que inspirou a criação do presente identificador de _frames_ pode ser reproduzida acessando os dados brutos no seguinte link: 
+
+> https://www.dropbox.com/sh/0d6te6nhkx4168i/AACL6NdsTh5Jwm-bwv2iDLAka?dl=0
+
+Nele é possível encontrar os seguintes arquivos:
+
+- Lista de arestas
+- Lista de nós
+- Pagerank temporal
+- Betweenness temporal
+
+Se recomenda abrir os arquivos como _DataFrames_ mediante a biblioteca Pandas do Python.
 
 ### Referência bibliográfica
 SEMETKO, Holli A; VALKENBURG, Patti M. _Framing European Politics: A Content Analysis of Press and Television News_. **Journal of Communication**, pp. 93-109, 2000.
