@@ -6,12 +6,12 @@
 <p align="center">Programa de Pós-graduação em Comunicação</p>
 <br>
 
-- Doutorando: Leonardo Magalhães Firmino (PUC-Rio)
-- Orientador: Prof. Arthur Ituassu (PUC-Rio)
-- Coorientador: Prof. Daniel Schwabe (PUC-Rio)
+- Dr. Leonardo Magalhães Firmino (PUC-Rio)
+- Prof. Dr. Arthur Ituassu (PUC-Rio)
+- Prof. Dr. Daniel Schwabe (PUC-Rio)
 
 ## Qual é o objetivo?
-Software de análise para a pesquisa de doutorado do autor (defendida no dia 3 de fevereiro de 2022) que identifica de forma automatizada enquadramentos genéricos da comunicação política em qualquer tipo de unidade de análise textual em língua portuguesa. Os quadros (ou _frames_) são pontos de vista selecionados e destacados na comunicação ao tratar assuntos específicos. Portanto, para Entman (1993, p.52), enquadrar uma questão significa: 
+Software de análise para a pesquisa de doutorado (defendida no dia 3 de fevereiro de 2022) que identifica de forma automatizada enquadramentos genéricos da comunicação política em qualquer tipo de unidade de análise textual em língua portuguesa. Os quadros (ou _frames_) são pontos de vista selecionados e destacados na comunicação ao tratar assuntos específicos. Portanto, para Entman (1993, p.52), enquadrar uma questão significa: 
 
 >"_selecionar alguns aspectos da realidade percebida e torná-los mais relevantes em um texto comunicativo, a fim de promover uma definição de problema particular, interpretação causal, avaliação moral e/ou recomendação de tratamento para a questão descrita_".
 
